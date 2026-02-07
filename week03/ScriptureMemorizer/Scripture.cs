@@ -20,6 +20,10 @@ public class Scripture
             string clean = part.Trim(',', '.', ';', ':', '!', '?', '"');
             Word w = new Word(clean);
             _words.Add(w);
+
+            if (clean.Length > 0)
+                _words.Add(new Word(clean));
+
         }
 
     }
